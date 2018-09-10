@@ -9,7 +9,7 @@ Local
 ## Objetivos
 * Primeira definição do escopo do projeto;
 * Definir função dos integrantes;
-* Definir público-alvo
+* Definir público-alvo;
 * Definição de ferramentas para comunicação e gerenciamento de projetos
 ## Tópicos Analisados
 * Funcionalidades da aplicação
