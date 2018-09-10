@@ -18,6 +18,6 @@ Local
 | Treinar Ruby           | Time     |
 | Treinar Rails          | Time     |
 | Treinar Git            | Time     |
-| Procurar APIs úteis    | Time     |
+| Procurar APIs úteis para o projeto | Time |
 | Criar os Lo-Fi mockups da primeira reunião | Time |
 | Pesquisar sobre Bootstrap e SASS  | Time |
