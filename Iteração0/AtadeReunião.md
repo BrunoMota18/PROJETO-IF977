@@ -10,8 +10,10 @@ Local
 * Primeira definição do escopo do projeto;
 * Definir função dos integrantes;
 * Definir público-alvo
+* Definição de ferramentas para comunicação e gerenciamento de projetos
 ## Tópicos Analisados
 * Funcionalidades da aplicação
+* Uso do Trello para gerenciamento do projeto
 ## Tasks
 | Ação | Responsável(eis) |
 |----------|----------|
