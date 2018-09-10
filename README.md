@@ -1,4 +1,4 @@
-# PROJETO-IF977
+# RabbitCare
 ## Justificativa
 &nbsp; Diante das necessidades modernas de atendimento e cuidado do paciente em casa(*homecare*), nós resolvemos desenvolver uma aplicação para integrar e facilitar a comunicação do médico e enfermeiro como também para o último prover de um informações para apoiar seu trabalho.
 ## Descrição
