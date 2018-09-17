@@ -1,7 +1,6 @@
 ## Ata de Reunião
-Data 06/09/18
-Local
-* Laboratório de Graduação 5
+* Data: 06/09/18
+* Local: Laboratório de Graduação 5
 ## Participantes
   * Bruno Vinícius Gonçalves Mota;
   * Marcelo Aguiar Coelho de Moura Filho;
