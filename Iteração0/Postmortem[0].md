@@ -1,4 +1,4 @@
-## Postmortem[0]
+## Postmortem
 * Data: 24/09/18
 * Local: Laboratório de Graduação 5
 ## Participantes
