@@ -4,6 +4,8 @@
 ## Participantes
   * Bruno Vinícius Gonçalves Mota;
   * Marcelo Aguiar Coelho de Moura Filho;
+## Ausentes
+  * Vitor Cardim Menezes (Não comparecimento por motivo de força maior.);
 ## Objetivos
 * Primeira definição do escopo do projeto;
 * Definir função dos integrantes;
