@@ -1,4 +1,4 @@
-## História dos usuários - versão 1
+## História dos usuários - Pick To Build
 * Data: 03/10/18
 * Local: Laboratório de Graduação 5
 ## Participantes
