@@ -7,6 +7,7 @@
 ## Ausentes
   * Marcelo Aguiar Coelho de Moura Filho. (Motivo de força maior)
 ## História dos usuários em formato connextra
+* Essas foram as histórias dos usuários iniciais a serem implementadas.
 | Como um | Eu quero | Para que | 
 |----------|----------|----------|
 | Enfermeiro          | Conseguir entrar utilizando o facebook     | Seja mais fácil, não precisando ficar lembrando algum novo login e senha.|
