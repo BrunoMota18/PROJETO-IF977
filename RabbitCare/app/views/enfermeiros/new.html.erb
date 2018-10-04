@@ -1,0 +1,21 @@
+<h1>Adicionando novo Enfermeiro</h1>
+<%= form_with scope: :Enfermeiro, local: true do |form| %>
+  <p>
+    <%= form.label :nome %><br>
+    <%= form.text_field :nome %>
+  </p>
+ 
+ <p>
+    <%= form.label :CPF %><br>
+    <%= form.text_field :CPF %>
+  </p>
+
+ <p>
+    <%= form.label :COREN %><br>
+    <%= form.text_field :COREN %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
