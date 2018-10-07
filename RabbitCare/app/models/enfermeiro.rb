@@ -1,0 +1,2 @@
+class Enfermeiro < Usuario
+end
