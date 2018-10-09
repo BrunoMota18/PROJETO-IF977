@@ -14,3 +14,4 @@
 | Responsável pelo paciente          | Alguma coisa que garanta que possa ter o retorno ou criação de nova senha     | Pois perco senhas com frequencia.|
 
 * Essas foram as histórias dos usuários iniciais a serem implementadas.
+* BDD: https://github.com/BrunoMota18/PROJETO-IF977/tree/master/RabbitCare/features
