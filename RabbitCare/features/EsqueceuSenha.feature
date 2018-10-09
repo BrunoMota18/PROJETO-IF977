@@ -34,4 +34,16 @@ Scenario: Perdeu a senha sabendo o email de recuperação, colocando o código p
     And Eu coloco uma senha diferente da que coloquei no outro campo
     When Eu aperto no confirmar
     Then Eu recebo um alerta mostrando que as senhas são diferentes
-    
+
+Scenario: Perdeu a senha sabendo o email de recuperação, colocando o código errado.
+    Given Eu navego para pagina de Login
+    when Eu aperto no Esqueceu a senha
+    Then Eu vou para tela de recuperação de senha
+    And Eu coloco o meu email no campo email
+    When Eu aperto no botão enviar
+    Then Eu recebo um código por email
+    And Eu coloco um código diferente do código recebido no campo código
+    And Eu coloco minha nova senha
+    And Eu repito minha nova senha no outro campo senha
+    When Eu aperto no confirmar
+    Then Eu recebo uma mensagem dizendo que o código não é valido
