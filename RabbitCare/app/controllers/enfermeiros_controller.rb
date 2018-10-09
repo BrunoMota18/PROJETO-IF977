@@ -3,7 +3,7 @@ class EnfermeirosController < ApplicationController
     end
 
     def create
-        render plain: params[:enfermeiro].inspect
+        #render plain: params[:enfermeiro].inspect
         @enfermeiro = Enfermeiro.new(enfermeiro_params)
         @enfermeiro.save
         redirect_to @enfermeiro

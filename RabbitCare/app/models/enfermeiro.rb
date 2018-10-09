@@ -1,2 +1,2 @@
-class Enfermeiro < Usuario
+class Enfermeiro < ApplicationRecord
 end
