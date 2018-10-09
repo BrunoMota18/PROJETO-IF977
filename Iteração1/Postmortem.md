@@ -27,10 +27,11 @@
 | Treinar Rails          | Time     |
 | Treinar Git            | Time     |
 | Atualização do README | Vitor |
+| Criação das HU(parcialmente BDD feito) | Marcelo e Vitor |
 ## Não realizadas na Iteração 1-2
 | Ação | Responsável(eis) |
 |----------|----------|
-| Criação das HU | Marcelo e Vitor |
+| Criação das HU(parcialmente BDD feito, implementação não) | Marcelo e Vitor |
 | Testar as APIs para o projeto que foram selecionadas | Bruno |
 | Pesquisar sobre Bootstrap e SASS  | Marcelo e Vitor |
 | Implementar alguns models, views e controllers que servirão como base para as próximas iterações| Time |
@@ -41,7 +42,6 @@
 | Pesquisar sobre Bootstrap e SASS  | Marcelo e Vitor |
 | Continuação de Desenvolvimento | Time |
 | Criação das HU | Time |
-| Criação de BDD  das 2 HU da Iteração 1 | Vitor |
 | Criação de BDD das HU que serão usadas na Iteração 2 | Vitor |
 | Criação de TDD das 2 HU da Iteração 1 | Time |
 | Criação de TDD das HU que serão usadas na Iteração 2 | Time |
