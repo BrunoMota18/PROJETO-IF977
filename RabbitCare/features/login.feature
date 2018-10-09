@@ -36,3 +36,15 @@ Scenario: Login com email certo e senha errada
     | teste  | senhateste  |  
     And  Eu clico no botão Entrar
     Then Eu devo ver um alerta de senha errada
+
+
+Scenario: Login com email inexistente
+    Given Eu navego para pagina de Login
+    And Eu coloco como endereço de email teste
+    And Eu coloco no Login
+    | email  | senha       |
+    | teste  | senhateste  |  
+    And  Eu clico no botão Entrar
+    Then Eu devo ver um alerta de email inexistente
+
+
