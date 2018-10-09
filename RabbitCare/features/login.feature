@@ -26,3 +26,13 @@ Scenario: Login com Facebook não registrado
     And Eu aperto no botão continuar
     And Eu não consigo Logar
     Then Eu devo ficar na tela do Facebook até a fechar
+
+
+Scenario: Login com email certo e senha errada
+    Given Eu navego para pagina de Login
+    And Eu coloco como endereço de email teste
+    And Eu coloco no Login
+    | email  | senha       |
+    | teste  | senhateste  |  
+    And  Eu clico no botão Entrar
+    Then Eu devo ver um alerta de senha errada
