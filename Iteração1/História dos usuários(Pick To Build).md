@@ -11,7 +11,6 @@
 | Como um | Eu quero | Para que | 
 |----------|----------|----------|
 | Enfermeiro          | Conseguir entrar utilizando o facebook     | Seja mais fácil, não precisando ficar lembrando algum novo login e senha.|
-| Responsável pelo paciente          | Alguma coisa que garanta que possa ter o retorno ou criação de nova senha     | Pois perco senhas com frequencia.|
+| Responsável pelo paciente          | alguma coisa que garanta que possa ter o retorno ou criação de nova senha     | Pois perco senhas com frequencia.|
 
 * Essas foram as histórias dos usuários iniciais a serem implementadas.
-* BDD: https://github.com/BrunoMota18/PROJETO-IF977/tree/master/RabbitCare/features

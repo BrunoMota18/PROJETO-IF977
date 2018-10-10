@@ -1,2 +1,3 @@
 class Enfermeiro < ApplicationRecord
 end
+
