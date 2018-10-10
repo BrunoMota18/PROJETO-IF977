@@ -10,6 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_10_09_185615) do
+
+  create_table "enfermeiros", force: :cascade do |t|
+    t.string "login"
+    t.string "senha"
+    t.string "cpf"
+    t.string "nome"
+    t.string "email"
+    t.string "telefone"
+    t.string "coren"
+    t.text "tarefas"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
