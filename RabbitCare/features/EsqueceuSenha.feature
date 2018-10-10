@@ -3,7 +3,7 @@ Feature: EsqueceuSenhaFeature
 
 Scenario: Perdeu a senha sabendo o email de recuperação, colocando o código perfeitamente, nova senha e a repetindo corretamente
     Given Eu navego para pagina de Login
-    when Eu aperto no Esqueceu a senha
+    When Eu aperto no Esqueceu a senha
     Then Eu vou para tela de recuperação de senha
     And Eu coloco o meu email no campo email
     When Eu aperto no botão enviar
@@ -16,7 +16,7 @@ Scenario: Perdeu a senha sabendo o email de recuperação, colocando o código p
 
 Scenario: Perdeu a senha não colocando email válido
     Given Eu navego para pagina de Login
-    when Eu aperto no Esqueceu a senha
+    When Eu aperto no Esqueceu a senha
     Then Eu vou para tela de recuperação de senha
     And Eu coloco o meu email no campo email
     When Eu aperto no botão enviar
@@ -24,7 +24,7 @@ Scenario: Perdeu a senha não colocando email válido
 
 Scenario: Perdeu a senha sabendo o email de recuperação, colocando o código perfeitamente e colocando senhas diferentes
     Given Eu navego para pagina de Login
-    when Eu aperto no Esqueceu a senha
+    When Eu aperto no Esqueceu a senha
     Then Eu vou para tela de recuperação de senha
     And Eu coloco o meu email no campo email
     When Eu aperto no botão enviar
@@ -37,7 +37,7 @@ Scenario: Perdeu a senha sabendo o email de recuperação, colocando o código p
 
 Scenario: Perdeu a senha sabendo o email de recuperação, colocando o código errado e senhas certas.
     Given Eu navego para pagina de Login
-    when Eu aperto no Esqueceu a senha
+    When Eu aperto no Esqueceu a senha
     Then Eu vou para tela de recuperação de senha
     And Eu coloco o meu email no campo email
     When Eu aperto no botão enviar
@@ -50,7 +50,7 @@ Scenario: Perdeu a senha sabendo o email de recuperação, colocando o código e
 
 Scenario: Perdeu a senha sabendo o email de recuperação, colocando o código errado e senhas diferentes.
     Given Eu navego para pagina de Login
-    when Eu aperto no Esqueceu a senha
+    When Eu aperto no Esqueceu a senha
     Then Eu vou para tela de recuperação de senha
     And Eu coloco o meu email no campo email
     When Eu aperto no botão enviar
