@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_09_185615) do
+ActiveRecord::Schema.define(version: 2018_10_10_181525) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "enfermeiros", force: :cascade do |t|
     t.string "login"
@@ -23,6 +26,21 @@ ActiveRecord::Schema.define(version: 2018_10_09_185615) do
     t.text "tarefas"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["coren"], name: "index_enfermeiros_on_coren", unique: true
+    t.index ["cpf"], name: "index_enfermeiros_on_cpf", unique: true
+    t.index ["email"], name: "index_enfermeiros_on_email", unique: true
+    t.index ["login"], name: "index_enfermeiros_on_login", unique: true
+  end
+
+  create_table "medicos", force: :cascade do |t|
+    t.string "nome"
+    t.string "cpf"
+    t.string "crm"
+    t.string "telefone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cpf"], name: "index_medicos_on_cpf", unique: true
+    t.index ["crm"], name: "index_medicos_on_crm", unique: true
   end
 
 end
