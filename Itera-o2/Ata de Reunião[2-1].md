@@ -53,7 +53,7 @@
 | Criação de TDD das 2 HU da Iteração 1 | Time |
 | Criação de TDD das HU que serão usadas na Iteração 2 | Time |
 | Criação das HU (em código) | Time |
-| Criação de inch no github para melhor controle e demonstrar a evolução | Time |
+| Criação de issues no github para melhor controle e demonstrar a evolução | Time |
 
 ## Lições Aprendidas
 * Uso do rvm foi modificado para o rbenv, pois estava dando problemas de versionamento
