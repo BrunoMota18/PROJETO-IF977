@@ -1,22 +1,44 @@
-<%= render "enfermeiros/registrations/new" %>
-<h1>Adicionando novo Enfermeiro</h1>
-<%= form_with scope: :enfermeiro, url: enfermeiros_path, local: true do |form| %>
-  <p>
-    <%= form.label :nome %><br>
-    <%= form.text_field :nome %>
-  </p>
- 
- <p>
-    <%= form.label :CPF %><br>
-    <%= form.text_field :cpf %>
-  </p>
+<h2>Sign up</h2>
 
- <p>
-    <%= form.label :COREN %><br>
-    <%= form.text_field :coren %>
-  </p>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome, autocomplete: "nome" %>
+  </div>
  
-  <p>
-    <%= form.submit %>
-  </p>
+ <div class="field">
+    <%= f.label :CPF %><br />
+    <%= f.text_field :cpf , autocomplete: "CPF" %>
+ </div>
+
+ <div class="field">
+    <%= f.label :COREN %><br />
+    <%= f.text_field :coren, autocomplete: "COREN" %>
+ </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
 <% end %>
+
+<%= render "enfermeiros/shared/links" %>
