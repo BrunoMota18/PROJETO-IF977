@@ -1,6 +1,6 @@
 # language: pt
 
-Funcionalidade: EsqueceuSenhaFuncionalidade
+Funcionalidade: esqueceu_senha Funcionalidade
     Essa Funcionalidade lida com a funcionalidade da recuperação da senha
 
 Cenário: Perdeu a senha sabendo o email de recuperação, colocE o o código perfeitamente, nova senha e a repetindo corretamente

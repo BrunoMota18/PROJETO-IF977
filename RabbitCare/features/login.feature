@@ -1,5 +1,6 @@
 # language: pt
-Funcionalidade: Login Funcionalidade
+
+Funcionalidade: login Funcionalidade
     Essa Funcionalidade lida com a funcionalidade do Login
 
 Cenário: Login com email correto e senha correto
@@ -19,7 +20,7 @@ Cenário: Login com Facebook Registrado
     Quando  Eu aperto no botão continuar
     Então  Eu devo ver a tela inicial
 
-Cenário: Login com Facebook não registrado
+Cenário: Login com Facebook inválido
     Dado  Eu navego para pagina de Login
     E  Eu clico no ícone do Facebook
     E  Eu sou redirecionado para o Logar com o Facebook
