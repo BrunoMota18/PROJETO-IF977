@@ -1,62 +1,64 @@
-Feature: EsqueceuSenhaFeature
-    Essa Feature lida com a funcionalidade da recuperação da senha
+# language: pt
 
-Scenario: Perdeu a senha sabendo o email de recuperação, colocando o código perfeitamente, nova senha e a repetindo corretamente
-    Given Eu navego para pagina de Login
-    When Eu aperto no Esqueceu a senha
-    Then Eu vou para tela de recuperação de senha
-    And Eu coloco o meu email no campo email
-    When Eu aperto no botão enviar
-    Then Eu recebo um código por email
-    And Eu coloco o código no campo código
-    And Eu coloco minha nova senha
-    And Eu repito minha nova senha no outro campo senha
-    When Eu aperto no confirmar
-    Then Eu recebo uma mensagem dizendo que a senha foi alterada e volto para tela inicial
+Funcionalidade: EsqueceuSenhaFuncionalidade
+    Essa Funcionalidade lida com a funcionalidade da recuperação da senha
 
-Scenario: Perdeu a senha não colocando email válido
-    Given Eu navego para pagina de Login
-    When Eu aperto no Esqueceu a senha
-    Then Eu vou para tela de recuperação de senha
-    And Eu coloco o meu email no campo email
-    When Eu aperto no botão enviar
-    Then Eu recebo um alerta que o email não é válido
+Cenário: Perdeu a senha sabendo o email de recuperação, colocE o o código perfeitamente, nova senha e a repetindo corretamente
+    Dado  Eu navego para pagina de Login
+    Quando  Eu aperto no Esqueceu a senha
+    Então  Eu vou para tela de recuperação de senha
+    E  Eu coloco o meu email no campo email
+    Quando  Eu aperto no botão enviar
+    Então  Eu recebo um código por email
+    E  Eu coloco o código no campo código
+    E  Eu coloco minha nova senha
+    E  Eu repito minha nova senha no outro campo senha
+    Quando  Eu aperto no confirmar
+    Então  Eu recebo uma mensagem dizendo que a senha foi alterada e volto para tela inicial
 
-Scenario: Perdeu a senha sabendo o email de recuperação, colocando o código perfeitamente e colocando senhas diferentes
-    Given Eu navego para pagina de Login
-    When Eu aperto no Esqueceu a senha
-    Then Eu vou para tela de recuperação de senha
-    And Eu coloco o meu email no campo email
-    When Eu aperto no botão enviar
-    Then Eu recebo um código por email
-    And Eu coloco o código no campo código
-    And Eu coloco minha nova senha
-    And Eu coloco uma senha diferente da que coloquei no outro campo
-    When Eu aperto no confirmar
-    Then Eu recebo um alerta mostrando que as senhas são diferentes
+Cenário: Perdeu a senha não colocE o email válido
+    Dado  Eu navego para pagina de Login
+    Quando  Eu aperto no Esqueceu a senha
+    Então  Eu vou para tela de recuperação de senha
+    E  Eu coloco o meu email no campo email
+    Quando  Eu aperto no botão enviar
+    Então  Eu recebo um alerta Quando email não é válido
 
-Scenario: Perdeu a senha sabendo o email de recuperação, colocando o código errado e senhas certas.
-    Given Eu navego para pagina de Login
-    When Eu aperto no Esqueceu a senha
-    Then Eu vou para tela de recuperação de senha
-    And Eu coloco o meu email no campo email
-    When Eu aperto no botão enviar
-    Then Eu recebo um código por email
-    And Eu coloco um código diferente do código recebido no campo código
-    And Eu coloco minha nova senha
-    And Eu repito minha nova senha no outro campo senha
-    When Eu aperto no confirmar
-    Then Eu recebo um alerta dizendo que o código não é valido
+Cenário: Perdeu a senha sabendo o email de recuperação, colocE o o código perfeitamente e colocE o senhas diferentes
+    Dado  Eu navego para pagina de Login
+    Quando  Eu aperto no Esqueceu a senha
+    Então  Eu vou para tela de recuperação de senha
+    E  Eu coloco o meu email no campo email
+    Quando  Eu aperto no botão enviar
+    Então  Eu recebo um código por email
+    E  Eu coloco o código no campo código
+    E  Eu coloco minha nova senha
+    E  Eu coloco uma senha diferente da que coloquei no outro campo
+    Quando  Eu aperto no confirmar
+    Então  Eu recebo um alerta mostrE o que as senhas são diferentes
 
-Scenario: Perdeu a senha sabendo o email de recuperação, colocando o código errado e senhas diferentes.
-    Given Eu navego para pagina de Login
-    When Eu aperto no Esqueceu a senha
-    Then Eu vou para tela de recuperação de senha
-    And Eu coloco o meu email no campo email
-    When Eu aperto no botão enviar
-    Then Eu recebo um código por email
-    And Eu coloco um código diferente do código recebido no campo código
-    And Eu coloco minha nova senha
-    And Eu coloco uma senha diferente da que coloquei no outro campo
-    When Eu aperto no confirmar
-    Then Eu recebo uma alerta dizendo que o código não é valido e senhas são diferentes.
+Cenário: Perdeu a senha sabendo o email de recuperação, colocE o o código errado e senhas certas.
+    Dado  Eu navego para pagina de Login
+    Quando  Eu aperto no Esqueceu a senha
+    Então  Eu vou para tela de recuperação de senha
+    E  Eu coloco o meu email no campo email
+    Quando  Eu aperto no botão enviar
+    Então  Eu recebo um código por email
+    E  Eu coloco um código diferente do código recebido no campo código
+    E  Eu coloco minha nova senha
+    E  Eu repito minha nova senha no outro campo senha
+    Quando  Eu aperto no confirmar
+    Então  Eu recebo um alerta dizendo Quando código não é valido
+
+Cenário: Perdeu a senha sabendo o email de recuperação, colocE o o código errado e senhas diferentes.
+    Dado  Eu navego para pagina de Login
+    Quando  Eu aperto no Esqueceu a senha
+    Então  Eu vou para tela de recuperação de senha
+    E  Eu coloco o meu email no campo email
+    Quando  Eu aperto no botão enviar
+    Então  Eu recebo um código por email
+    E  Eu coloco um código diferente do código recebido no campo código
+    E  Eu coloco minha nova senha
+    E  Eu coloco uma senha diferente da que coloquei no outro campo
+    Quando  Eu aperto no confirmar
+    Então  Eu recebo uma alerta dizendo Quando código não é valido e senhas são diferentes.
