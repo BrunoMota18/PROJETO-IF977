@@ -18,6 +18,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
+  config.omniauth :facebook, '181573312729061', '45b565091aa2aa82aff6b0b3cb98d3eb', scope: "email"
   config.mailer_sender = 'rabbitcareapplication@gmail.com'
 
   # Configure the class responsible to send e-mails.
