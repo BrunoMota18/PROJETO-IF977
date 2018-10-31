@@ -2,6 +2,7 @@ class EnfermeirosController < ApplicationController
     before_action :configure_permitted_parameters, if: :devise_controller?
 
     def new
+        render 'enfermeiros/registrations/new.html.erb'
     end
 
     def index
@@ -12,7 +13,7 @@ class EnfermeirosController < ApplicationController
         @enfermeiro = Enfermeiro.new(enfermeiro_params)
         @enfermeiro.save
         puts @enfermeiro.errors.full_messages
-        render :action => 'show'
+        redirect_to @enfermeiro
     end
                 
     def show
