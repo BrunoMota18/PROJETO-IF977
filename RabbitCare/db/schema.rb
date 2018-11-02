@@ -10,35 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_29_194310) do
+ActiveRecord::Schema.define(version: 2018_11_02_022203) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "enfermeiros", force: :cascade do |t|
-    t.string "login"
-    t.string "senha"
-    t.string "cpf"
-    t.string "nome"
-    t.string "email", default: "", null: false
-    t.string "telefone"
-    t.string "coren"
-    t.text "tarefas"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.string "name"
-    t.string "provider"
-    t.string "uid"
-    t.index ["coren"], name: "index_enfermeiros_on_coren", unique: true
-    t.index ["cpf"], name: "index_enfermeiros_on_cpf", unique: true
-    t.index ["email"], name: "index_enfermeiros_on_email", unique: true
-    t.index ["login"], name: "index_enfermeiros_on_login", unique: true
-    t.index ["reset_password_token"], name: "index_enfermeiros_on_reset_password_token", unique: true
-  end
 
   create_table "medicos", force: :cascade do |t|
     t.string "nome"
@@ -56,6 +31,31 @@ ActiveRecord::Schema.define(version: 2018_10_29_194310) do
     t.index ["crm"], name: "index_medicos_on_crm", unique: true
     t.index ["email"], name: "index_medicos_on_email", unique: true
     t.index ["reset_password_token"], name: "index_medicos_on_reset_password_token", unique: true
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "login"
+    t.string "senha"
+    t.string "cpf"
+    t.string "nome"
+    t.string "telefone"
+    t.string "tarefas"
+    t.string "coren"
+    t.string "crm"
+    t.string "estado"
+    t.string "tipo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "provider"
+    t.string "uid"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end

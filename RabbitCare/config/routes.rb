@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users, :controllers => {omniauth_callbacks: 'callbacks'}
   devise_for :medicos
-  devise_for :enfermeiros, :controllers => {omniauth_callbacks: 'callbacks'}
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "welcome#index"
-  resources :enfermeiros
   resources :medicos
   resources :registrar
 end
