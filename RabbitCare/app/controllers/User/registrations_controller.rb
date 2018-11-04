@@ -15,6 +15,7 @@ class User::RegistrationsController < Devise::RegistrationsController
     @user.save
     #flash.now[:notice] = 'Parabéns! Você agora faz parte do RabbitCare!'
     puts @user.errors.full_messages
+    sign_in(@user)
     redirect_to @user
    end
 
