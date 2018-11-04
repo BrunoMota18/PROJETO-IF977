@@ -1,0 +1,56 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+ 
+ <div class="field">
+    <%= f.label :CPF %><br>
+    <%= f.text_field :cpf %>
+ </div>
+
+ <div id="enfermeiro" class="field">
+    <%= f.label :COREN %><br>
+    <%= f.text_field :coren %>
+ </div>
+
+ <div id="medico" class="field">
+    <%= f.label :CRM %><br>
+    <%= f.text_field :crm %>
+ </div>
+
+ <p>
+    <strong>Tipo de Usuário</strong><br />
+    <%= f.radio_button :tipo, 'enfermeiro', checked: true %> Enfermeiro<br />
+    <%= f.radio_button :tipo, 'medico' %> Medico<br />
+</p>
+
+ <div class="actions">
+    <%= f.submit "Sign up" %>
+ </div>
+
+<% end %>
+
+<%= render "users/shared/links" %>
