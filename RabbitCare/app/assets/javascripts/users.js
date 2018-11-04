@@ -3,6 +3,8 @@ $( document ).on('turbolinks:load', function() {
             // first: hide all the divs
             $('#enfermeiro').css("display","none");
             $('#medico').css("display","none");
+            $('#enfermeiro input[type=text]').val('');
+            $('#medico input[type=text]').val('');
 
             // then get the div ID to show (i stored it in the "value" of the radio button
             var fieldToShow = $(this).val();
