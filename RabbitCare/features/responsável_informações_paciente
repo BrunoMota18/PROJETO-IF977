@@ -1,0 +1,46 @@
+# language: pt
+
+Funcionalidade: responsável_informações_paciente Funcionalidade
+    Essa Funcionalidade lida com a o responsável tendo acesso as informações do paciente
+
+Contexto: 
+    Login com email correto e senha correto
+    Dado  Eu navego para pagina de Login
+    E  Eu coloco como endereço de email teste
+    E  Eu coloco no Login
+    | email  | senha       |
+    | teste  | senhateste  |  
+    Quando   Eu clico no botão Entrar
+    Então  Eu devo ver a tela inicial
+
+Cenário: Informação sobre status
+    Dado Eu estar na página inicial depois do login
+    Quando Eu olho para a informação do status
+    Então  Eu devo ver o status
+
+Cenário: Informação sobre peso
+    Dado Eu estar na página inicial depois do login
+    Quando Eu olho para a informação do peso
+    Então  Eu devo ver o peso
+
+
+Cenário: Informação sobre Idade
+    Dado Eu estar na página inicial depois do login
+    Quando Eu olho para a informação do Idade
+    Então  Eu devo ver o Idade
+
+Cenário: Informação sobre Nome
+    Dado Eu estar na página inicial depois do login
+    Quando Eu olho para a informação do Nome
+    Então  Eu devo ver o Nome
+
+Cenário: Informação sobre CPF
+    Dado Eu estar na página inicial depois do login
+    Quando Eu olho para a informação do CPF
+    Então  Eu devo ver o CPF
+
+Cenário: Informação sobre Observações
+    Dado Eu estar na página inicial depois do login
+    Quando Eu olho para a informação do Observações
+    Então  Eu devo ver o Observações
+
