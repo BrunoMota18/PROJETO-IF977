@@ -12,11 +12,13 @@ class User::RegistrationsController < Devise::RegistrationsController
   # POST /resource
    def create
     @user = User.new(user_params)
-    @user.save
-    #flash.now[:notice] = 'Parabéns! Você agora faz parte do RabbitCare!'
+    if @user.save
+      sign_in(@user)
+      redirect_to @user
+    end
     puts @user.errors.full_messages
-    sign_in(@user)
-    redirect_to @user
+    flash[:notice] = @user.errors.full_messages.first
+    redirect_to new_user_registration_path
    end
 
   # GET /resource/edit
