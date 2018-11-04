@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class EnfermeiroTest < ActiveSupport::TestCase
+class CallbacksControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
