@@ -1,6 +1,6 @@
 
-Dado(/^Eu navego para pagina de Login $/) do
-  visit root_path
+Dado('Eu navego para pagina de Login') do
+  visit ("/users/sign_in")
 end
 
 Dado("Eu coloco no Login") do |table|
