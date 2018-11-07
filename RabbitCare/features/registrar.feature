@@ -118,7 +118,6 @@ Cenário: Registrar com Facebook não registrado
     Dado  Eu navego para pagina de inicial
     E  Eu clico no ícone do Facebook
     E  Eu sou redirecionado para o Logar com o Facebook
-    E  Eu coloco uma senha válida ao meu Facebook
     E  Eu aperto no botão continuar
     Quando  Eu consigo Logar
     Então  Eu sou redirecionado para a página de seleção de usuário
