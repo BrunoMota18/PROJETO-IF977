@@ -18,7 +18,7 @@
 |----------|----------|
 | Criação da autenticação(HU)   | Bruno |
 | Criação dos BDDs para as HU que temos implementadas | Vitor |
-| Criação dos TDDs de controllers, models e views | Vitor |
+| Criação dos TDDs de controllers e models | Vitor |
 ## Realizadas não planejadas na Iteração 3-2
 | Ação | Responsável(eis) |
 |----------|----------|
@@ -36,6 +36,7 @@
 ## Planejamento para 4-1
 | Ação | Responsável(eis) |
 |----------|----------|
+| Criação dos TDDs das Views | Vitor |
 | Criação de TDD de novas HU | Vitor |
 | Criação das HU (em código) | Time |
 | Front-end             | Marcelo|
