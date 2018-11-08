@@ -1,0 +1,2 @@
+class CrudUsuário < ApplicationRecord
+end
