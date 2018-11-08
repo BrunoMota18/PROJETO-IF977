@@ -1,6 +1,6 @@
 
 Dado('Eu navego para pagina de Login') do
-  visit ("/users/sign_in")
+  visit ('/users/sign_in')
 end
 
 Dado("Eu coloco no Login") do |table|
@@ -17,11 +17,11 @@ Dado("Eu sou redirecionado para o Logar com o Facebook") do
 end
 
 Dado("Eu conecto ao meu Facebook") do
-  "sign_in_and_redirect @user, event: :authentication"
+  sign_in_and_redirect @user, event: :authentication
 end
 
 Dado("Eu navego para pagina de inicial") do
-  "/users/sign_up"
+  visit ('/users/sign_up')
 end
 
 
