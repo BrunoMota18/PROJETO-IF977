@@ -6,10 +6,11 @@ ruby '2.4.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 gem 'pg'
+gem 'factory_bot_rails', "~>4.0"
 gem 'devise'
 gem 'jquery-rails'
 gem 'omniauth-facebook'
-gem 'rspec'
+gem 'rspec-rails', "~>3.6"
 gem 'gherkin'
 gem 'database_cleaner'
 # Use Puma as the app server
@@ -55,6 +56,7 @@ group :test do
   gem 'cucumber'
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'faker'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end

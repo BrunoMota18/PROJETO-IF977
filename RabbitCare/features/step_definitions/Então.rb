@@ -1,17 +1,17 @@
 Então("Eu vou para tela de recuperação de senha") do
-  "visit /users/password/new"
+  visit ('/users/password/new')
 end
 
 Então("Eu coloco o meu email no campo email") do
-  "fill_in email, with=> email@email"
+  fill_in email, with => email@email
 end
 
 Então("Eu recebo um código por email") do
-  "recebo o codigo?????"
+  "Código recebido via email, não se testa aqui"
 end
 
 Então("Eu coloco o código no campo código") do
-  "fill in código, with=> |código|"
+  fill in código, with => String
 end
 
 Então("Eu coloco minha nova senha") do
@@ -19,83 +19,79 @@ Então("Eu coloco minha nova senha") do
 end
 
 Então("Eu repito minha nova senha no outro campo senha") do
-  "fill_in password_confirmation, with => @String"
+  fill_in password_confirmation, with => @String
 end
 
 Então("Eu recebo uma mensagem dizendo que a senha foi alterada e volto para tela inicial") do
-  "não sei fazer esse"
+  visit ('/users/sign_in')
 end
 
 Então("Eu recebo um alerta Quando email não é válido") do
-  "redirect_to root_path"
+  "alerta recebido na tela"
 end
 
 Então("Eu coloco uma senha diferente da que coloquei no outro campo") do
-  pending # Write code here that turns the phrase above into concrete actions
+    password_confirmation != password
 end
 
 Então("Eu recebo um alerta mostrE o que as senhas são diferentes") do
-  pending # Write code here that turns the phrase above into concrete actions
+  "passwords inst match"
 end
 
 Então("Eu coloco um código diferente do código recebido no campo código") do
-  pending # Write code here that turns the phrase above into concrete actions
+  fill_in in código, with => String
 end
 
 Então("Eu recebo um alerta dizendo Quando código não é valido") do
-  pending # Write code here that turns the phrase above into concrete actions
+  "mensagem de alerta"
 end
 
 Então("Eu recebo uma alerta dizendo Quando código não é valido e senhas são diferentes.") do
-  pending # Write code here that turns the phrase above into concrete actions
+  "mensagem de alerta"
 end
 
 Então("Eu devo ver a tela inicial") do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit ('/users/sign_in/')
 end
 
 Então("Eu devo ficar na tela do Facebook até a fechar") do
-  pending # Write code here that turns the phrase above into concrete actions
+  sign_in_and_redirect @user, event: :authentication
 end
 
 Então("Eu devo ver um alerta de senha errada") do
-  pending # Write code here that turns the phrase above into concrete actions
+  "mensagem de alerta"
 end
 
 Então("Eu devo ver um alerta de email inexistente") do
-  pending # Write code here that turns the phrase above into concrete actions
+  "mensagem de alerta"
 end
 
 Então("Eu escolho o que sou entre") do |table|
   # table is a Cucumber::MultilineArgument::DataTable
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Então("Eu sou redirecionado para a página de seleção de usuário") do
-  pending # Write code here that turns the phrase above into concrete actions
+  data = table.raw
 end
 
 Então("Eu escolho o que sou  entre") do |table|
   # table is a Cucumber::MultilineArgument::DataTable
-  pending # Write code here that turns the phrase above into concrete actions
+  data = table.raw
 end
 
 Então("Eu vejo uma mensagem avisando para preencher o CRM") do
-  pending # Write code here that turns the phrase above into concrete actions
+  "mensagem de alerta"
 end
 
 Então("Eu vejo uma mensagem avisando para preencher o CPF") do
-  pending # Write code here that turns the phrase above into concrete actions
+  "mensagem de alerta"
 end
 
 Então("Eu vejo uma mensagem avisando para preencher o COREN") do
-  pending # Write code here that turns the phrase above into concrete actions
+  "mensagem de alerta"
 end
 
 Então("Eu vejo uma mensagem avisando para preencher o CNPJ") do
-  pending # Write code here that turns the phrase above into concrete actions
+  "mensagem de alerta"
 end
 
 Então("Eu aperto em registrar") do
-  "/users/sign_up"
+  visit ('/users/sign_up')
 end
