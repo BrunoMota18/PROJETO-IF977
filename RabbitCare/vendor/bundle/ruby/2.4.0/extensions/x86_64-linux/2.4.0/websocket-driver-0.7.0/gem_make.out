@@ -1,0 +1,15 @@
+current directory: /home/ec2-user/environment/PROJETO-IF977/RabbitCare/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+/home/ec2-user/.rvm/rubies/ruby-2.4.4/bin/ruby -r ./siteconf20181109-6265-48h0k2.rb extconf.rb
+creating Makefile
+
+current directory: /home/ec2-user/environment/PROJETO-IF977/RabbitCare/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/ec2-user/environment/PROJETO-IF977/RabbitCare/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/ec2-user/environment/PROJETO-IF977/RabbitCare/vendor/bundle/ruby/2.4.0/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20181109-6265-1wqza6i
