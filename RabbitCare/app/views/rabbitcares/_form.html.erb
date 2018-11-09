@@ -1,0 +1,27 @@
+<%= form_with(model: rabbitcare, local: true) do |form| %>
+  <% if rabbitcare.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rabbitcare.errors.count, "error") %> prohibited this rabbitcare from being saved:</h2>
+
+      <ul>
+      <% rabbitcare.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :adicionar_medicamento %>
+    <%= form.text_field :adicionar_medicamento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :remover_medicamento %>
+    <%= form.text_field :remover_medicamento %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

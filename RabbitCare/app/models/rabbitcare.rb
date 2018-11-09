@@ -1,0 +1,2 @@
+class Rabbitcare < ApplicationRecord
+end

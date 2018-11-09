@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :rabbitcares
   devise_for :users, :controllers => {registrations: 'user/registrations', omniauth_callbacks: 'callbacks'}
   devise_scope :user do
     root to: "devise/sessions#new"
