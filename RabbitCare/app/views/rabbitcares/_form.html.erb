@@ -1,3 +1,5 @@
+<% if false %>
+
 <%= form_with(model: rabbitcare, local: true) do |form| %>
   <% if rabbitcare.errors.any? %>
     <div id="error_explanation">
@@ -12,16 +14,17 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :adicionar_medicamento %>
-    <%= form.text_field :adicionar_medicamento %>
+    <%= form.label :addmedicamento %>
+    <%= form.text_field :addmedicamento %>
   </div>
 
   <div class="field">
-    <%= form.label :remover_medicamento %>
-    <%= form.text_field :remover_medicamento %>
+    <%= form.label :removemedicamento %>
+    <%= form.text_field :removemedicamento %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+<% end %>
 <% end %>
