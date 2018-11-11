@@ -1,14 +1,19 @@
-$( document ).on('turbolinks:load', function() {
-    $('input[type=radio][name="user[tipo]"]').change(function () {
-            // first: hide all the divs
-            $('#enfermeiro').css("display","none");
-            $('#medico').css("display","none");
-            $('#enfermeiro input[type=text]').val('');
-            $('#medico input[type=text]').val('');
+var radios = document.getElementsByName("user[tipo]");
+for (i = 0; i < radios.length; i++) {
+  radios[i].addEventListener("change", alteraView);
+}
 
-            // then get the div ID to show (i stored it in the "value" of the radio button
-            var fieldToShow = $(this).val();
-            // now use jQuery selector and change the display setting of that field
-            $("#" + fieldToShow).css("display","block");
-    });
-});
+function alteraView() {
+    var temp_radios = document.getElementsByName("user[tipo]");
+    for (i = 0; i < temp_radios.length; i++) {
+        var info_tipo = document.getElementById(temp_radios[i].value)
+        if(temp_radios[i].checked){
+            info_tipo.style.display = 'block';  
+        }
+        else{
+            var campos_tipo = info_tipo.getElementsByTagName('input'); 
+            for (j = 0; j < campos_tipo.length; j++) campos_tipo[j].value = ''; 
+            info_tipo.style.display = 'none';
+        }
+    }
+}
