@@ -1,0 +1,10 @@
+<h1>Nova mensagem para <%= @destinatario.nome %></h1>
+
+<%= form_for @mensagem do |f| %>
+  <%= hidden_field_tag 'destinatario_id', @destinatario.id %>
+
+  <%= f.label :conteudo %>
+  <%= f.text_area :conteudo %>
+
+  <%= f.submit %>
+<% end %>
