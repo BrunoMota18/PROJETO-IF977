@@ -13,10 +13,7 @@ Cenário: Login com email correto e senha correto
 
 Cenário: Login com Facebook Registrado
     Dado  Eu navego para pagina de Login
-    E  Eu clico no ícone do Facebook
-    E  Eu sou redirecionado para o Logar com o Facebook
-    E  Eu conecto ao meu Facebook
-    Quando  Eu aperto no botão continuar
+    Quando  Eu clico no ícone do Facebook
     Então  Eu devo ver a tela inicial
 
 Cenário: Login com email certo e senha errada
@@ -25,7 +22,7 @@ Cenário: Login com email certo e senha errada
     | email  | senha       |
     | teste  | senhateste  |  
     Quando   Eu clico no botão Entrar
-    Então  Eu devo ver um alerta de senha errada
+    Então  Eu devo ver um alerta
 
 
 Cenário: Login com email inexistente
@@ -34,6 +31,4 @@ Cenário: Login com email inexistente
     | email  | senha       |
     | teste  | senhateste  |  
     Quando   Eu clico no botão Entrar
-    Então  Eu devo ver um alerta de email inexistente
-
-
+    Então  Eu devo ver um alerta
