@@ -11,6 +11,6 @@ Dado("Eu sou redirecionado para o Logar com o Facebook") do
   visit('/resource/auth/facebook')
 end
 
-Dado("Eu navego para pagina de inicial") do
+Dado("Eu navego para pagina inicial") do
   visit('/users/sign_in')
 end

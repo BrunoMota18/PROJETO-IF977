@@ -11,26 +11,48 @@ Quando("Eu aperto no Esqueceu a senha") do
 end
 
 Quando("Eu aperto no botão enviar") do
-  pending # Write code here that turns the phrase above into concrete actions
+  click_on('Send me reset password instructions')
 end
 
 Quando("Eu aperto no registrar") do
-  click_on('Sign up')
+  # click_on('Sign up')
 end
 
-Quando("Eu escolho o que sou  entre") do |table|
-  # table is a Cucumber::MultilineArgument::DataTable
-  pending # Write code here that turns the phrase above into concrete actions
+Quando("Eu escolho o que sou  entre Médico e Enfermeiro, sou Médico") do
+ # choose('medico')
+end
+
+Quando("Eu escolho o que sou  entre Médico e Enfermeiro, sou Enfermeiro") do
+  # choose('enfermeiro')
 end
 
 Quando("Eu preencho meus dados corretamente") do
-  pending # Write code here that turns the phrase above into concrete actions
+#  fill_in('Email', :with => 'teste@gmail.com')
+#  fill_in('Password', :with => 'senha1')
+#  fill_in('Password confirmation', :with => 'senha1')
+#  fill_in('Cpf', :with => '123456789-58')
 end
 
 Quando("Eu esqueço meu CRM") do
-  pending # Write code here that turns the phrase above into concrete actions
+#  fill_in('Email', :with => 'teste@gmail.com')
+#  fill_in('Password', :with => 'senha1')
+#  fill_in('Password confirmation', :with => 'senha1')
+# fill_in('Cpf', :with => '123456789-58')
+#  fill_in('Coren', :with => '')
 end
 
 Quando("Eu esqueço meu COREN") do
+#  fill_in('Email', :with => 'teste@gmail.com')
+#  fill_in('Password', :with => 'senha1')
+#  fill_in('Password confirmation', :with => 'senha1')
+#  fill_in('Cpf', :with => '123456789-58')
+# fill_in('Crm', :with => '')
+end
+
+Quando("Eu aperto no - na janela visitas") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Quando("Eu aperto no + na janela visitas") do
   pending # Write code here that turns the phrase above into concrete actions
 end

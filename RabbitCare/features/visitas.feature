@@ -6,7 +6,6 @@ Funcionalidade: visitas Funcionalidade
 Contexto: 
     Login com email correto e senha correto
     Dado  Eu navego para pagina de Login
-    E  Eu coloco como endereço de email
     E  Eu coloco no Login
     | email  | senha       |
     | teste  | senhateste  |  
@@ -14,27 +13,15 @@ Contexto:
     Então  Eu devo ver a tela inicial
 
 Cenário: Marcando consulta
-    Dado Eu estar na página inicial depois do login
+    Dado Eu devo ver a tela inicial
     Quando Eu aperto no + na janela visitas
     Então  Eu devo colocar as informações da próxima consulta
     E Eu aperto em confirmar
     Então Eu devo ver a visita marcada
 
 Cenário: Desmarcando consulta
-    Dado Eu estar na página inicial depois do login
+    Dado Eu devo ver a tela inicial
     Quando Eu aperto no - na janela visitas
     Então  Eu devo escolher a consulta para desmarcar
     E Eu aperto em confirmar
     Então Eu não devo ver a visita que foi desmarcada
-
-Cenário: Visualização de consulta Enfermeiro
-    Dado Eu estar na página inicial depois do login
-    E Eu sou Enfermeiro
-    Quando Eu olho para janela visitas
-    Então  Eu devo ver as próximas visitas
-
-Cenário: Visualização de consulta Responsável
-    Dado Eu estar na página inicial depois do login
-    E Eu sou Responsável
-    Quando Eu olho para janela visitas
-    Então  Eu devo ver as próximas visitas
