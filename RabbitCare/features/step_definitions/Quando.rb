@@ -1,5 +1,5 @@
 Quando("Eu aperto no Esqueceu a senha") do
-  click_on ('/users/password/new')
+  click('Sign in with Facebook')
 end
 
 Quando("Eu aperto no botão enviar") do
@@ -11,7 +11,7 @@ Quando("Eu aperto no confirmar") do
 end
 
 Quando("Eu clico no botão Entrar") do
-  click_on ('a verificar')
+  click_on ('Log in')
 end
 
 Quando("Eu aperto no botão continuar") do
@@ -31,15 +31,15 @@ Quando("Eu aperto no registrar") do
 end
 
 Quando("Eu esqueço meu CNPJ") do
-  cnpj: nil
+  
 end
 
 Quando("Eu esqueço meu COREN") do
-  coren: nil
+  
 end
 
 Quando("Eu esqueço meu CPF") do
-  cpf: nil
+
 end
 
 Quando("Eu preencho meus dados corretamente") do
@@ -47,5 +47,5 @@ Quando("Eu preencho meus dados corretamente") do
 end
 
 Quando("Eu esqueço meu CRM") do
-  crm: nil
+  
 end

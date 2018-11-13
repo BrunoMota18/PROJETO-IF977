@@ -3,7 +3,7 @@ Então("Eu vou para tela de recuperação de senha") do
 end
 
 Então("Eu coloco o meu email no campo email") do
-  fill_in email, with => email@email
+  
 end
 
 Então("Eu recebo um código por email") do
@@ -11,7 +11,7 @@ Então("Eu recebo um código por email") do
 end
 
 Então("Eu coloco o código no campo código") do
-  fill in código, with => String
+  fill_in código, with => String
 end
 
 Então("Eu coloco minha nova senha") do
@@ -27,7 +27,7 @@ Então("Eu recebo uma mensagem dizendo que a senha foi alterada e volto para tel
 end
 
 Então("Eu recebo um alerta Quando email não é válido") do
-  "alerta recebido na tela"
+  page.should have_content('Invalid %{authentication_keys} or password.')
 end
 
 Então("Eu coloco uma senha diferente da que coloquei no outro campo") do
@@ -39,7 +39,7 @@ Então("Eu recebo um alerta mostrE o que as senhas são diferentes") do
 end
 
 Então("Eu coloco um código diferente do código recebido no campo código") do
-  fill_in in código, with => String
+  
 end
 
 Então("Eu recebo um alerta dizendo Quando código não é valido") do
