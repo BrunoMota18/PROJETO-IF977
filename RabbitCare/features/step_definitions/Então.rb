@@ -7,7 +7,7 @@ Então("Eu devo ver um alerta") do
 end
 
 Então("Eu aperto em registrar") do
-#  click_on('Sign up')
+# click_on('Sign up')
 end
 
 Então("Eu recebo um código por email") do
