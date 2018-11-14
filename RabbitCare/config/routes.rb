@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   devise_scope :user do
     root to: "devise/sessions#new"
     get '/login', to: 'devise/sessions#new', as: 'login'
-    
   end
+
 
   devise_for :medicos
   
