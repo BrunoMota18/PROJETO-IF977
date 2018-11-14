@@ -15,7 +15,7 @@ Quando("Eu aperto no botão enviar") do
 end
 
 Quando("Eu aperto no registrar") do
-  # click_on('Sign up')
+   click_on('Sign up')
 end
 
 Quando("Eu escolho o que sou  entre Médico e Enfermeiro, sou Médico") do
