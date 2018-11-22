@@ -1,6 +1,8 @@
 <h1>Welcome to the RabbitCare!</h1>
 
 <% if user_signed_in? %>
+   <div id="current-user"></div>
+    <!-- ... -->
   <li>
   <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
   </li>

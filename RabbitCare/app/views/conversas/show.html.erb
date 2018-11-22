@@ -1,7 +1,7 @@
 <h1>Conversando com <%= @conversa.with(current_user).nome %></h1>
 
 <div id="conversa-main">
-  <div id="conversa-conteudo">
+  <div id="conversa-conteudo" data-conversa-id="<%= @conversa.id %>">
     <%= render @conversa.mensagems %>
   </div>
 
@@ -13,5 +13,3 @@
     <%= f.submit %>
   <% end %>
 </div>
-
-<%= javascript_include_tag 'conversas' %>
