@@ -1,33 +1,10 @@
-function fadeOutEffect() {
-    var fadeTarget = document.querySelectorAll('#notification');
-    for(i = 0; i < fadeTarget.length; i++){
-        fadeTarget[i].outerHTML = "";
-        /*
-        var fadeEffect = setInterval(function () {
-            if (!fadeTarget[i].style.opacity) {
-                fadeTarget[i].style.opacity = 1;
-            }
-            if (fadeTarget[i].style.opacity > 0) {
-                fadeTarget[i].style.opacity -= 0.1;
-            } else {
-                clearInterval(fadeEffect);
-            }
-        }, 200);
-        */
-    }
-}
-
 /*var chat_app_inicializado = false;*/
-
+//= require cable
 document.addEventListener("turbolinks:load", function() {
 
-    var mensagens = document.getElementById('conversa-conteudo')
-    try{
-        var mensagens_size = mensagens.getElementsByTagName('p').length;
-    }
-    catch(error){
-        var mensagens_size = 0;
-    }
+    var mensagens = document.getElementById('conversa-conteudo');
+    var mensagens_size = 0;
+    if(mensagens) mensagens_size = mensagens.getElementsByTagName('p').length;
 
     /*if(!chat_app_inicializado){*/
         App.chat = App.cable.subscriptions.create({channel: 'NotificationsChannel'}, 
@@ -57,7 +34,12 @@ document.addEventListener("turbolinks:load", function() {
                         var close_notifications = document.getElementsByClassName('close');
                         if(close_notifications){
                             for(i = 0; i < close_notifications.length; i++){
-                                close_notifications[i].addEventListener('click', fadeOutEffect);
+                                close_notifications[i].addEventListener('click', function(){
+                                    var fadeTarget = document.querySelectorAll('#notification');
+                                    for(i = 0; i < fadeTarget.length; i++){
+                                        fadeTarget[i].outerHTML = "";
+                                    }
+                                });
                              }  
                         } 
                     }
@@ -80,5 +62,4 @@ document.addEventListener("turbolinks:load", function() {
             }, false
         );
     }
-
 });
