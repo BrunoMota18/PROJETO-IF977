@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_02_022203) do
+ActiveRecord::Schema.define(version: 2018_11_12_003138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "conversas", force: :cascade do |t|
+    t.integer "autor_id"
+    t.integer "destinatario_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["autor_id", "destinatario_id"], name: "index_conversas_on_autor_id_and_destinatario_id", unique: true
+    t.index ["autor_id"], name: "index_conversas_on_autor_id"
+    t.index ["destinatario_id"], name: "index_conversas_on_destinatario_id"
+  end
 
   create_table "medicos", force: :cascade do |t|
     t.string "nome"
@@ -31,6 +41,16 @@ ActiveRecord::Schema.define(version: 2018_11_02_022203) do
     t.index ["crm"], name: "index_medicos_on_crm", unique: true
     t.index ["email"], name: "index_medicos_on_email", unique: true
     t.index ["reset_password_token"], name: "index_medicos_on_reset_password_token", unique: true
+  end
+
+  create_table "mensagems", force: :cascade do |t|
+    t.text "conteudo"
+    t.bigint "conversa_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["conversa_id"], name: "index_mensagems_on_conversa_id"
+    t.index ["user_id"], name: "index_mensagems_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -70,4 +90,6 @@ ActiveRecord::Schema.define(version: 2018_11_02_022203) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "mensagems", "conversas"
+  add_foreign_key "mensagems", "users"
 end

@@ -1,0 +1,15 @@
+<h1>Conversando com <%= @conversa.with(current_user).nome %></h1>
+
+<div id="conversa-main">
+  <div id="conversa-conteudo" data-conversa-id="<%= @conversa.id %>">
+    <%= render @conversa.mensagems %>
+  </div>
+
+  <%= form_for @mensagem do |f| %>
+    <%= hidden_field_tag 'conversa_id', @conversa.id %>
+    <%= f.label :conteudo %>
+    <%= f.text_area :conteudo %>
+
+    <%= f.submit %>
+  <% end %>
+</div>
