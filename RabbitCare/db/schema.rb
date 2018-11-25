@@ -10,27 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_02_022203) do
+ActiveRecord::Schema.define(version: 2018_11_25_154451) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "medicos", force: :cascade do |t|
+  create_table "pacientes", force: :cascade do |t|
+    t.string "cpf_responsavel"
+    t.string "nome_responsavel"
     t.string "nome"
-    t.string "cpf"
-    t.string "crm"
-    t.string "telefone"
+    t.string "estado"
+    t.string "medico_crm"
+    t.string "enfermeiro_coren"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.index ["cpf"], name: "index_medicos_on_cpf", unique: true
-    t.index ["crm"], name: "index_medicos_on_crm", unique: true
-    t.index ["email"], name: "index_medicos_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_medicos_on_reset_password_token", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -70,4 +63,6 @@ ActiveRecord::Schema.define(version: 2018_11_02_022203) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "pacientes", "users", column: "enfermeiro_coren", primary_key: "coren"
+  add_foreign_key "pacientes", "users", column: "medico_crm", primary_key: "crm"
 end
