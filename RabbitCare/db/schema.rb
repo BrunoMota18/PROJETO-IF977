@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 2018_11_26_165614) do
     t.index ["destinatario_id"], name: "index_conversas_on_destinatario_id"
   end
 
+  create_table "medicamentos", force: :cascade do |t|
+    t.string "nome"
+    t.text "descricao"
+    t.string "cpf"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cpf"], name: "index_medicamentos_on_cpf", unique: true
+  end
+
   create_table "mensagems", force: :cascade do |t|
     t.text "conteudo"
     t.bigint "conversa_id"
@@ -45,6 +54,9 @@ ActiveRecord::Schema.define(version: 2018_11_26_165614) do
     t.string "enfermeiro_coren"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["cpf"], name: "index_pacientes_on_cpf", unique: true
+    t.index ["enfermeiro_coren"], name: "index_pacientes_on_enfermeiro_coren", unique: true
+    t.index ["medico_crm"], name: "index_pacientes_on_medico_crm", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -82,15 +94,6 @@ ActiveRecord::Schema.define(version: 2018_11_26_165614) do
     t.index ["crm"], name: "index_users_on_crm", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
-
-  create_table "medicamentos", force: :cascade do |t|
-    t.string "nome"
-    t.text "descricao"
-    t.string "cpf"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["cpf"], name: "index_medicamentos_on_cpf", unique: true
   end
 
   create_table "utensilios", force: :cascade do |t|
