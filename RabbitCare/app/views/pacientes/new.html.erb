@@ -1,0 +1,35 @@
+<h2>Adicionar novo paciente</h2>
+
+<%= form_for(@paciente, url: pacientes_path) do |f| %>
+
+  <div class="field">
+    <%= f.label :cpf_responsavel %><br />
+    <%= f.text_field :cpf_responsavel, autofocus: true, autocomplete: "cpf_responsavel" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nome_responsavel %><br>
+    <%= f.text_field :nome_responsavel %>
+  </div>
+ 
+ <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+ </div>
+
+ <div id="enfermeiro" class="field">
+    <%= f.label :estado %><br>
+    <%= f.text_field :estado %>
+ </div>
+
+ <div class="field">
+    <%= f.label :COREN %><br>
+    <%= f.text_field :enfermeiro_coren %>
+ </div>
+
+
+ <div class="actions">
+    <%= f.submit "Sign up" %>
+ </div>
+
+<% end %>

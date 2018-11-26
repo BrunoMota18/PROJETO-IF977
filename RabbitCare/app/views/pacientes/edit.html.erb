@@ -1,0 +1,28 @@
+<h2>Editando Paciente</h2>
+
+<%= form_for(@paciente) do |f| %>
+  <p>
+    <%= f.label :cpf_responsavel %><br />
+    <%= f.text_field :cpf_responsavel, autofocus: true, autocomplete: "cpf_responsavel" %>
+  </p>
+  <p>
+    <%= f.label :nome_responsavel %><br>
+    <%= f.text_field :nome_responsavel %>
+  </p>
+  <p>
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :estado %><br>
+    <%= f.text_field :estado %>
+  </p>
+  <p>
+    <%= f.label :COREN %><br>
+    <%= f.text_field :enfermeiro_coren %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>

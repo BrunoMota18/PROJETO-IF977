@@ -1,6 +1,11 @@
 <div>
   <%= paciente.nome %>
   <br>
-  <%= link_to 'Ver Dados', paciente_path(paciente) %>
+  <%= link_to 'Ver Dados', paciente_path(paciente) %> |
+  <% if current_user.tipo.eql? 'medico' %>
+    <%= link_to 'Editar', edit_paciente_path(paciente) %> |
+    <%= link_to 'Remover', paciente, method: :delete,
+        data:{confirm: 'Você tem certeza? Esta ação é irreversível e todos os dados do paciente serão excluídos.'} %>
+  <% end %>
   <hr>
 </div>
