@@ -34,6 +34,24 @@ ActiveRecord::Schema.define(version: 2018_11_26_165614) do
     t.index ["cpf"], name: "index_medicamentos_on_cpf", unique: true
   end
 
+  create_table "medicos", force: :cascade do |t|
+    t.string "nome"
+    t.string "cpf"
+    t.string "crm"
+    t.string "telefone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.index ["cpf"], name: "index_medicos_on_cpf", unique: true
+    t.index ["crm"], name: "index_medicos_on_crm", unique: true
+    t.index ["email"], name: "index_medicos_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_medicos_on_reset_password_token", unique: true
+  end
+
   create_table "mensagems", force: :cascade do |t|
     t.text "conteudo"
     t.bigint "conversa_id"
