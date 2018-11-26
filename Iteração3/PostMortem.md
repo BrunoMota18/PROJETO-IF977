@@ -1,7 +1,7 @@
 ## Ata de reunião[3-1]
 * Data: 07/11/18
 * Local: Sala E103
-* Intervalo: 31/10/2018 - 07/10/2018
+* Intervalo: 31/10/2018 - 07/11/2018
 ## Participantes
   * Bruno Vinícius Gonçalves Mota;
   * Marcelo Aguiar Coelho de Moura Filho;
