@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users, :controllers => {registrations: 'user/registrations', omniauth_callbacks: 'callbacks'}
+  devise_for :users, :controllers => {registrations: 'user/registrations', omniauth_callbacks: "user/omniauth_callbacks" }
+  
   devise_scope :user do
     root to: "devise/sessions#new"
     get '/login', to: 'devise/sessions#new', as: 'login'
   end
+
 
   devise_for :medicos
   
@@ -16,3 +18,5 @@ Rails.application.routes.draw do
 
   mount ActionCable.server => '/cable'
 end
+
+
