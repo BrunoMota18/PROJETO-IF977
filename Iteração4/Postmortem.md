@@ -26,6 +26,7 @@
 | Deploy no Heroku      | Bruno |
 ## Realizadas não planejadas na Iteração 4-1
 | Ação | Responsável(eis) |
+|----------|----------|
 | Criação de novos BDDs | Vitor |
 | Criação de um chat de mensagem interno | Bruno |
 | Screencast | Bruno |
