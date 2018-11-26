@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_12_003138) do
+ActiveRecord::Schema.define(version: 2018_11_14_161924) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "appwebexemps", force: :cascade do |t|
+    t.string "nome"
+    t.string "id_seq"
+    t.text "endereco"
+    t.decimal "preco"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "Proximo_procedimento"
+    t.string "Adicionar_procedimento"
+    t.string "Concluir_Procedimento"
+    t.string "Descricao_procedimento"
+    t.string "Dados_Paciente"
+    t.string "Procedimentos_cancelados"
+    t.string "Procedimentos_realizados"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "conversas", force: :cascade do |t|
     t.integer "autor_id"
@@ -23,6 +45,36 @@ ActiveRecord::Schema.define(version: 2018_11_12_003138) do
     t.index ["autor_id", "destinatario_id"], name: "index_conversas_on_autor_id_and_destinatario_id", unique: true
     t.index ["autor_id"], name: "index_conversas_on_autor_id"
     t.index ["destinatario_id"], name: "index_conversas_on_destinatario_id"
+  end
+
+  create_table "crud_usuarios", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "enfermeiros", force: :cascade do |t|
+    t.string "login"
+    t.string "senha"
+    t.string "cpf"
+    t.string "nome"
+    t.string "email", default: "", null: false
+    t.string "telefone"
+    t.string "coren"
+    t.text "tarefas"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "name"
+    t.string "provider"
+    t.string "uid"
+    t.index ["coren"], name: "index_enfermeiros_on_coren", unique: true
+    t.index ["cpf"], name: "index_enfermeiros_on_cpf", unique: true
+    t.index ["email"], name: "index_enfermeiros_on_email", unique: true
+    t.index ["login"], name: "index_enfermeiros_on_login", unique: true
+    t.index ["reset_password_token"], name: "index_enfermeiros_on_reset_password_token", unique: true
   end
 
   create_table "medicos", force: :cascade do |t|
@@ -51,6 +103,20 @@ ActiveRecord::Schema.define(version: 2018_11_12_003138) do
     t.datetime "updated_at", null: false
     t.index ["conversa_id"], name: "index_mensagems_on_conversa_id"
     t.index ["user_id"], name: "index_mensagems_on_user_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rabbitcares", force: :cascade do |t|
+    t.string "addmedicamento"
+    t.string "removemedicamento"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
