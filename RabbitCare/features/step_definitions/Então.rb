@@ -7,7 +7,7 @@ Então("Eu devo ver um alerta") do
 end
 
 Então("Eu aperto em registrar") do
-# click_on('Sign up')
+  find_link('Sign in with Facebook').visible?
 end
 
 Então("Eu recebo um código por email") do

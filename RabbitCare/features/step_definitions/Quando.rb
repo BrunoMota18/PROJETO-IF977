@@ -15,7 +15,7 @@ Quando("Eu aperto no botão enviar") do
 end
 
 Quando("Eu aperto no registrar") do
-   #visit('/users/sign_up')
+  find_link('Sign up').visible?
 end
 
 Quando("Eu escolho o que sou  entre Médico e Enfermeiro, sou Médico") do
