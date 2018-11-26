@@ -24,7 +24,6 @@
 | Criação das HU (em código) | Bruno |
 | Front-end             | Marcelo|
 | Deploy no Heroku      | Bruno |
-| Criação do modelo ER | Marcelo |
 ## Realizadas não planejadas na Iteração 4-1
 | Ação | Responsável(eis) |
 | Criação de novos BDDs | Vitor |
