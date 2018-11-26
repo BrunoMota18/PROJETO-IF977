@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @utensilio.nome %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @utensilio.descricao %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @utensilio.cpf %>
+</p>
+
+<%= link_to 'Edit', edit_utensilio_path(@utensilio, paciente_id: params[:paciente_id]) %> |
+<%= link_to 'Back', utensilios_path(paciente_id: params[:paciente_id]) %>

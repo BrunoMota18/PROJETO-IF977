@@ -1,0 +1,29 @@
+<%= form_with(model: medicamento, local: true) do |form| %>
+  <% if medicamento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(medicamento.errors.count, "error") %> prohibited this medicamento from being saved:</h2>
+
+      <ul>
+      <% medicamento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= hidden_field_tag 'paciente_id', params[:paciente_id] %>  
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_area :descricao %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

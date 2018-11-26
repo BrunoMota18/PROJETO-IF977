@@ -7,5 +7,7 @@
     <%= link_to 'Remover', paciente, method: :delete,
         data:{confirm: 'Você tem certeza? Esta ação é irreversível e todos os dados do paciente serão excluídos.'} %>
   <% end %>
+  <%= link_to 'Medicamentos', medicamentos_path(paciente_id: paciente.id) %>
+  <%= link_to 'Utensilios', utensilios_path(paciente_id: paciente.id) %>
   <hr>
 </div>

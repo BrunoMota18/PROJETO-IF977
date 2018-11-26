@@ -1,0 +1,6 @@
+<h1>Editing Utensilio</h1>
+
+<%= render 'form', utensilio: @utensilio %>
+
+<%= link_to 'Show', utensilio_path(@utensilio, paciente_id: params[:paciente_id]) %> |
+<%= link_to 'Back', utensilios_path(paciente_id: params[:paciente_id]) %>

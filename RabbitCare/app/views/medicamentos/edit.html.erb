@@ -1,0 +1,6 @@
+<h1>Editing Medicamento</h1>
+
+<%= render 'form', medicamento: @medicamento %>
+
+<%= link_to 'Show', medicamento_path(@medicamento, paciente_id: params[:paciente_id]) %> |
+<%= link_to 'Back', medicamentos_path(paciente_id: params[:paciente_id]) %>

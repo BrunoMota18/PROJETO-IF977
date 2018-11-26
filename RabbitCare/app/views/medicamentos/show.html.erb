@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @medicamento.nome %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @medicamento.descricao %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @medicamento.cpf %>
+</p>
+
+<%= link_to 'Edit', edit_medicamento_path(@medicamento, paciente_id: params[:paciente_id]) %> |
+<%= link_to 'Back', medicamentos_path(paciente_id: params[:paciente_id]) %>
