@@ -60,6 +60,3 @@ end
 Quando("Eu aperto adicionar pacientes") do
   visit('/pacientes/new')
 end
-Quando("Eu aperto no botão enviar mensagem") do
-  visit('users')
-end
