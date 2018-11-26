@@ -1,0 +1,8 @@
+<div>
+  Conversando com <%= conversa.with(current_user).nome %>
+  <br>
+  <em><%= conversa.mensagems.last.conteudo.truncate(50) %></em>
+  <br>
+  <%= link_to 'Ver Conversa', conversa_path(conversa) %>
+  <hr>
+</div>

@@ -10,9 +10,13 @@ Rails.application.routes.draw do
   devise_for :medicos
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :users, only: [:show]
+  resources :mensagems, only: [:new, :create]
+  resources :conversas, only: [:index, :show]
+  resources :users, only: [:index, :show]
   resources :medicos
   resources :registrar
+
+  mount ActionCable.server => '/cable'
 end
 
 

@@ -5,6 +5,10 @@ class User < ApplicationRecord
   :recoverable, :rememberable, :validatable, :omniauthable,
   :confirmable, :trackable
   
+  has_many :autorais_conversas, class_name: 'Conversa', foreign_key: 'autor_id'
+  has_many :recebidas_conversas, class_name: 'Conversa', foreign_key: 'destinatario_id'
+  has_many :mensagems, dependent: :destroy
+
   validates :nome, presence: true
   validates :nome, length: {in: 2..50}
   validates :cpf, presence: true
