@@ -1,5 +1,5 @@
 Então("Eu devo ver a tela inicial") do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit('/users')
 end
 
 Então("Eu devo ver um alerta") do
