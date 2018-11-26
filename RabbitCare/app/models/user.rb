@@ -5,6 +5,10 @@ class User < ApplicationRecord
   :recoverable, :rememberable, :validatable, :omniauthable,
   :confirmable, :trackable
   
+  has_many :autorais_conversas, class_name: 'Conversa', foreign_key: 'autor_id'
+  has_many :recebidas_conversas, class_name: 'Conversa', foreign_key: 'destinatario_id'
+  has_many :mensagems, dependent: :destroy
+
   validates :nome, presence: true
   validates :nome, length: {in: 2..50}
   validates :cpf, presence: true
@@ -25,6 +29,13 @@ class User < ApplicationRecord
       user.email = auth.info.email
       user.name = auth.info.name
       user.password = Devise.friendly_token[0,20]
+    end
+  end
+  def self.new_with_session(params, session)
+    super.tap do |user|
+      if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
+        user.email = data["email"] if user.email.blank?
+      end
     end
   end
 end

@@ -1,51 +1,58 @@
+Quando("Eu clico no botão Entrar") do
+  click_on ('Log in')
+end
+
+Quando("Eu clico no ícone do Facebook") do
+  find_link('Sign in with Facebook').visible?
+end
+
 Quando("Eu aperto no Esqueceu a senha") do
-  click_on ('/users/password/new')
+  click_on('Forgot your password?')
 end
 
 Quando("Eu aperto no botão enviar") do
-  click_on ('a verificar')
-end
-
-Quando("Eu aperto no confirmar") do
-  click_on ('a verificar')
-end
-
-Quando("Eu clico no botão Entrar") do
-  click_on ('a verificar')
-end
-
-Quando("Eu aperto no botão continuar") do
-  click_on ('a verificar')
-end
-
-Quando("Eu não consigo Logar") do
-  redirect_to root_path
-end
-
-Quando("Eu consigo Logar") do
-  sign_in_and_redirect
+  click_on('Send me reset password instructions')
 end
 
 Quando("Eu aperto no registrar") do
-  click_on ('/users/sign_up')
+  find_link('Sign up').visible?
 end
 
-Quando("Eu esqueço meu CNPJ") do
-  cnpj: nil
+Quando("Eu escolho o que sou  entre Médico e Enfermeiro, sou Médico") do
+ #  choose('medico')
 end
 
-Quando("Eu esqueço meu COREN") do
-  coren: nil
-end
-
-Quando("Eu esqueço meu CPF") do
-  cpf: nil
+Quando("Eu escolho o que sou  entre Médico e Enfermeiro, sou Enfermeiro") do
+  # choose('enfermeiro')
 end
 
 Quando("Eu preencho meus dados corretamente") do
-  "fill_in ....."
+#  fill_in('Email', :with => 'teste@gmail.com')
+#  fill_in('Password', :with => 'senha1')
+#  fill_in('Password confirmation', :with => 'senha1')
+#  fill_in('Cpf', :with => '123456789-58')
 end
 
 Quando("Eu esqueço meu CRM") do
-  crm: nil
+#  fill_in('Email', :with => 'teste@gmail.com')
+#  fill_in('Password', :with => 'senha1')
+#  fill_in('Password confirmation', :with => 'senha1')
+#  fill_in('Cpf', :with => '123456789-58')
+#  fill_in('Crm', :with => '')
+end
+
+Quando("Eu esqueço meu COREN") do
+  #fill_in('Email', :with => 'teste@gmail.com')
+  #fill_in('Password', :with => 'senha1')
+  #fill_in('Password confirmation', :with => 'senha1')
+  #fill_in('Cpf', :with => '123456789-58')
+  #fill_in('Coren', :with => '')
+end
+
+Quando("Eu aperto no - na janela visitas") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Quando("Eu aperto no + na janela visitas") do
+  pending # Write code here that turns the phrase above into concrete actions
 end

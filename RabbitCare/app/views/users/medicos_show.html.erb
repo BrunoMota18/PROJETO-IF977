@@ -1,6 +1,8 @@
 <h1>Welcome to the RabbitCare!</h1>
 
 <% if user_signed_in? %>
+   <div id="current-user"></div>
+    <!-- ... -->
   <li>
   <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
   </li>
@@ -31,3 +33,4 @@
 </p>
 
 <%= link_to 'Adicionar Paciente', new_paciente_path %>
+<%= link_to 'Enviar mensagem', users_path %>

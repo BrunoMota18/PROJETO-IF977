@@ -1,12 +1,12 @@
 # language: pt
 
-Funcionalidade: responsável_informações_paciente Funcionalidade
-    Essa Funcionalidade lida com a o responsável tendo acesso as informações do paciente
+Funcionalidade: informações_Paciente Funcionalidade
+    Essa Funcionalidade lida com o acesso as informações do paciente
 
 Contexto: 
     Login com email correto e senha correto
     Dado  Eu navego para pagina de Login
-    E  Eu coloco como endereço de email teste
+    E  Eu coloco como endereço de email
     E  Eu coloco no Login
     | email  | senha       |
     | teste  | senhateste  |  
