@@ -1,8 +1,10 @@
-require 'rails_helper'
+#Usamos apenas um controller que é o user, esse teste foi feito quando estavámos pensando em usar 2.
 
-RSpec.describe EnfermeirosController, type: :controller do
-    it 'response succefully' do
-        get :index
-        expect(response).to be_sucess
-    end
-end
+#require 'rails_helper'
+
+#RSpec.describe EnfermeirosController, type: :controller do
+#    it 'response succefully' do
+#       get :index
+#        expect(response).to be_sucess
+#    end
+#end
