@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_12_003138) do
+ActiveRecord::Schema.define(version: 2018_11_26_165614) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 2018_11_12_003138) do
     t.index ["autor_id", "destinatario_id"], name: "index_conversas_on_autor_id_and_destinatario_id", unique: true
     t.index ["autor_id"], name: "index_conversas_on_autor_id"
     t.index ["destinatario_id"], name: "index_conversas_on_destinatario_id"
+  end
+
+  create_table "medicamentos", force: :cascade do |t|
+    t.string "nome"
+    t.text "descricao"
+    t.string "cpf"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cpf"], name: "index_medicamentos_on_cpf", unique: true
   end
 
   create_table "medicos", force: :cascade do |t|
@@ -51,6 +60,18 @@ ActiveRecord::Schema.define(version: 2018_11_12_003138) do
     t.datetime "updated_at", null: false
     t.index ["conversa_id"], name: "index_mensagems_on_conversa_id"
     t.index ["user_id"], name: "index_mensagems_on_user_id"
+  end
+
+  create_table "pacientes", force: :cascade do |t|
+    t.string "cpf_responsavel"
+    t.string "nome_responsavel"
+    t.string "cpf"
+    t.string "nome"
+    t.string "estado"
+    t.string "medico_crm"
+    t.string "enfermeiro_coren"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -90,6 +111,17 @@ ActiveRecord::Schema.define(version: 2018_11_12_003138) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "utensilios", force: :cascade do |t|
+    t.string "nome"
+    t.text "descricao"
+    t.string "cpf"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cpf"], name: "index_utensilios_on_cpf", unique: true
+  end
+
   add_foreign_key "mensagems", "conversas"
   add_foreign_key "mensagems", "users"
+  add_foreign_key "pacientes", "users", column: "enfermeiro_coren", primary_key: "coren"
+  add_foreign_key "pacientes", "users", column: "medico_crm", primary_key: "crm"
 end
