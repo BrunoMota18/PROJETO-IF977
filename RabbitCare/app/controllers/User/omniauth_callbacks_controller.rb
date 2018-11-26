@@ -28,19 +28,19 @@ class User::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # More info at:
   # https://github.com/plataformatec/devise#omniauth
 
-  GET|POST /resource/auth/facebook
+  #GET|POST /resource/auth/facebook
   def passthru
     super
   end
 
-  GET|POST /users/auth/facebook/callback
+  #GET|POST /users/auth/facebook/callback
   def failure
     super
   end
 
   # protected
 
-  The path used when OmniAuth fails
+  #The path used when OmniAuth fails
   def after_omniauth_failure_path_for(scope)
     super(scope)
   end
