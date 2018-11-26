@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+'
 RSpec.describe "utensilios/index", type: :view do
   before(:each) do
     assign(:utensilios, [
@@ -23,3 +23,4 @@ RSpec.describe "utensilios/index", type: :view do
     assert_select "tr>td", :text => "Cpf".to_s, :count => 2
   end
 end
+'

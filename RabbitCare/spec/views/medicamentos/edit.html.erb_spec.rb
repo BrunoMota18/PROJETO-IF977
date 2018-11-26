@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+'
 RSpec.describe "medicamentos/edit", type: :view do
   before(:each) do
     @medicamento = assign(:medicamento, Medicamento.create!(
@@ -22,3 +22,4 @@ RSpec.describe "medicamentos/edit", type: :view do
     end
   end
 end
+'

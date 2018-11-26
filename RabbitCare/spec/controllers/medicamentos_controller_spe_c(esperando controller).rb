@@ -23,27 +23,27 @@ require 'rails_helper'
 # removed from Rails core in Rails 5, but can be added back in via the
 # `rails-controller-testing` gem.
 
-RSpec.describe UtensiliosController, type: :controller do
+RSpec.describe MedicamentosController, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid
-  # Utensilio. As you add validations to Utensilio, be sure to
+  # Medicamento. As you add validations to Medicamento, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    skip(Add a hash of attributes valid for your model)
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    skip(Add a hash of attributes invalid for your model)
   }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
-  # UtensiliosController. Be sure to keep this updated too.
+  # MedicamentosController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
   describe "GET #index" do
     it "returns a success response" do
-      Utensilio.create! valid_attributes
+      Medicamento.create! valid_attributes
       get :index, params: {}, session: valid_session
       expect(response).to be_successful
     end
@@ -51,8 +51,8 @@ RSpec.describe UtensiliosController, type: :controller do
 
   describe "GET #show" do
     it "returns a success response" do
-      utensilio = Utensilio.create! valid_attributes
-      get :show, params: {id: utensilio.to_param}, session: valid_session
+      medicamento = Medicamento.create! valid_attributes
+      get :show, params: {id: medicamento.to_param}, session: valid_session
       expect(response).to be_successful
     end
   end
@@ -66,29 +66,29 @@ RSpec.describe UtensiliosController, type: :controller do
 
   describe "GET #edit" do
     it "returns a success response" do
-      utensilio = Utensilio.create! valid_attributes
-      get :edit, params: {id: utensilio.to_param}, session: valid_session
+      medicamento = Medicamento.create! valid_attributes
+      get :edit, params: {id: medicamento.to_param}, session: valid_session
       expect(response).to be_successful
     end
   end
 
   describe "POST #create" do
     context "with valid params" do
-      it "creates a new Utensilio" do
+      it "creates a new Medicamento" do
         expect {
-          post :create, params: {utensilio: valid_attributes}, session: valid_session
-        }.to change(Utensilio, :count).by(1)
+          post :create, params: {medicamento: valid_attributes}, session: valid_session
+        }.to change(Medicamento, :count).by(1)
       end
 
-      it "redirects to the created utensilio" do
-        post :create, params: {utensilio: valid_attributes}, session: valid_session
-        expect(response).to redirect_to(Utensilio.last)
+      it "redirects to the created medicamento" do
+        post :create, params: {medicamento: valid_attributes}, session: valid_session
+        expect(response).to redirect_to(Medicamento.last)
       end
     end
 
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'new' template)" do
-        post :create, params: {utensilio: invalid_attributes}, session: valid_session
+        post :create, params: {medicamento: invalid_attributes}, session: valid_session
         expect(response).to be_successful
       end
     end
@@ -100,41 +100,41 @@ RSpec.describe UtensiliosController, type: :controller do
         skip("Add a hash of attributes valid for your model")
       }
 
-      it "updates the requested utensilio" do
-        utensilio = Utensilio.create! valid_attributes
-        put :update, params: {id: utensilio.to_param, utensilio: new_attributes}, session: valid_session
-        utensilio.reload
+      it "updates the requested medicamento" do
+        medicamento = Medicamento.create! valid_attributes
+        put :update, params: {id: medicamento.to_param, medicamento: new_attributes}, session: valid_session
+        medicamento.reload
         skip("Add assertions for updated state")
       end
 
-      it "redirects to the utensilio" do
-        utensilio = Utensilio.create! valid_attributes
-        put :update, params: {id: utensilio.to_param, utensilio: valid_attributes}, session: valid_session
-        expect(response).to redirect_to(utensilio)
+      it "redirects to the medicamento" do
+        medicamento = Medicamento.create! valid_attributes
+        put :update, params: {id: medicamento.to_param, medicamento: valid_attributes}, session: valid_session
+        expect(response).to redirect_to(medicamento)
       end
     end
 
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'edit' template)" do
-        utensilio = Utensilio.create! valid_attributes
-        put :update, params: {id: utensilio.to_param, utensilio: invalid_attributes}, session: valid_session
+        medicamento = Medicamento.create! valid_attributes
+        put :update, params: {id: medicamento.to_param, medicamento: invalid_attributes}, session: valid_session
         expect(response).to be_successful
       end
     end
   end
 
   describe "DELETE #destroy" do
-    it "destroys the requested utensilio" do
-      utensilio = Utensilio.create! valid_attributes
+    it "destroys the requested medicamento" do
+      medicamento = Medicamento.create! valid_attributes
       expect {
-        delete :destroy, params: {id: utensilio.to_param}, session: valid_session
-      }.to change(Utensilio, :count).by(-1)
+        delete :destroy, params: {id: medicamento.to_param}, session: valid_session
+      }.to change(Medicamento, :count).by(-1)
     end
 
-    it "redirects to the utensilios list" do
-      utensilio = Utensilio.create! valid_attributes
-      delete :destroy, params: {id: utensilio.to_param}, session: valid_session
-      expect(response).to redirect_to(utensilios_url)
+    it "redirects to the medicamentos list" do
+      medicamento = Medicamento.create! valid_attributes
+      delete :destroy, params: {id: medicamento.to_param}, session: valid_session
+      expect(response).to redirect_to(medicamentos_url)
     end
   end
 

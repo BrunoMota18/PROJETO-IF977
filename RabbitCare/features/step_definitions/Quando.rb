@@ -56,3 +56,7 @@ end
 Quando("Eu aperto no + na janela visitas") do
   pending # Write code here that turns the phrase above into concrete actions
 end
+
+Quando("Eu aperto adicionar pacientes") do
+  visit('/pacientes/new')
+end
