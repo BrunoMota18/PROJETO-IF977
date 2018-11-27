@@ -13,7 +13,7 @@ class User::RegistrationsController < Devise::RegistrationsController
    def create
     @user = User.new(user_params)
     user_params.each do |key, value|
-      @user.key = nil if value.blank?
+      @user[key] = nil if value.blank?
     end
     if @user.save
       sign_in(@user)
