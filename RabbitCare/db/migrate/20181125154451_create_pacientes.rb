@@ -16,7 +16,7 @@ class CreatePacientes < ActiveRecord::Migration[5.2]
     add_foreign_key :pacientes, :users, column: :enfermeiro_coren, primary_key: :coren
 
     add_index :pacientes, :cpf,                  unique: true
-    add_index :pacientes, :enfermeiro_coren,     
+    add_index :pacientes, :enfermeiro_coren  
     add_index :pacientes, :medico_crm       
 
   end
