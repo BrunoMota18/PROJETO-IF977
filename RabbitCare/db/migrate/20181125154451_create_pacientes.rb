@@ -17,7 +17,7 @@ class CreatePacientes < ActiveRecord::Migration[5.2]
 
     add_index :pacientes, :cpf,                  unique: true
     add_index :pacientes, :enfermeiro_coren,     
-    add_index :pacientes, :medico_crm,           
+    add_index :pacientes, :medico_crm       
 
   end
 end
