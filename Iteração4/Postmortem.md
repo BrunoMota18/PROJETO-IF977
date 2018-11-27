@@ -34,7 +34,7 @@
 | Ação | Responsável(eis) |
 |----------|----------|
 
-## Lições Aprendidas
+## Lições Aprendidas no projeto em si
 *Foram muitas e as listaremos:
 - Heroku é uma ferramenta muito boa e interessante, mas é extremamente complicado para dar o passo inicial.
 - Trabalhar em equipe é algo ótimo, mas existem problemas de agendas e disponibilidades.
@@ -45,5 +45,6 @@
 - Branch é algo feito pelos Deuses, pois você pode fazer qualquer cagada possível e ainda assim não arriscar a destruição do projeto.
 - Brincadeiras, ensinamentos e sarcasmos a parte, o grande ensinamento não foi desenvolver o software em si, mas os passos para fazê-lo, o como se trabalhar, aprendendo com os erros e acertos, aprendendo o que todo o percurso é mais importante do que o produto final, para o quesito de aprendizagem e que é possível fazer algo que você faz crescer continuamente, com pequenos releases e funcional.
 - Maior ensinamento da cadeira em si é a questão do como as coisas são feitas e como deveriam ser feitas, se elas fossem feitas o como deveriam o ser, muitos problemas na produção de softwares poderiam ser mitigados, é algo o qual pretendemos levar adianta, o ensinamento e quem sabe refinar o projeto também.
+- Nem sempre as coisas são como planejamos em questão de tempo, nem sempre é possível entrar as coisas no prazo ou como gostariamos.
 
 
