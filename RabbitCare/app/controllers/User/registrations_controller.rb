@@ -14,6 +14,7 @@ class User::RegistrationsController < Devise::RegistrationsController
     @user = User.new(user_params)
     user_params.each do |key, value|
       @user.key = nil if value.blank?
+    end
     if @user.save
       sign_in(@user)
       redirect_to @user
