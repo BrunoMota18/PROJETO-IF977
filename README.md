@@ -1,4 +1,6 @@
 # RabbitCare
+## Link da Aplicação: https://rabbitcareapp.herokuapp.com/
+
 ## Descrição
 &nbsp; O RabbitCare, usando as características em nível de apologia  ao carisma e velocidade do coelho, é um SaaS focado no ambiente médico residêncial o “Home Care” que é literalmente cuidar em casa, onde se instala um ambiente hospitalar em uma casa, sendo ele mais simples ou chegando ao nível de uma UTI. O foco fornecer um modo simples de informatizar todas as coisas que são feitas no papel nesses ambientes, como relatórios, ainda oferecendo uma ponte direta de comunicação da equipe médica(enfermeiros e médicos) de modo formal à distância e fornecer as informações do paciente aos seus médicos e familiares, onde quer que estejam.
 
