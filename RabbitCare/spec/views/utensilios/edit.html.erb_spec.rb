@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+'
 RSpec.describe "utensilios/edit", type: :view do
   before(:each) do
     @utensilio = assign(:utensilio, Utensilio.create!(
@@ -22,3 +22,4 @@ RSpec.describe "utensilios/edit", type: :view do
     end
   end
 end
+'

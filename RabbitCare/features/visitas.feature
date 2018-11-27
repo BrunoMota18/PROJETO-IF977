@@ -13,14 +13,14 @@ Contexto:
     Então  Eu devo ver a tela inicial
 
 Cenário: Marcando consulta
-    Dado Eu devo ver a tela inicial
+    Dado Eu estou na tela inicial
     Quando Eu aperto no + na janela visitas
     Então  Eu devo colocar as informações da próxima consulta
     E Eu aperto em confirmar
     Então Eu devo ver a visita marcada
 
 Cenário: Desmarcando consulta
-    Dado Eu devo ver a tela inicial
+    Dado Eu estou na tela inicial
     Quando Eu aperto no - na janela visitas
     Então  Eu devo escolher a consulta para desmarcar
     E Eu aperto em confirmar

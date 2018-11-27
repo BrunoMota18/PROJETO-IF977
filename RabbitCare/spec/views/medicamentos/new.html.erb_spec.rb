@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+'
 RSpec.describe "medicamentos/new", type: :view do
   before(:each) do
     assign(:medicamento, Medicamento.new(
@@ -21,4 +21,4 @@ RSpec.describe "medicamentos/new", type: :view do
       assert_select "input[name=?]", "medicamento[cpf]"
     end
   end
-end
+end'

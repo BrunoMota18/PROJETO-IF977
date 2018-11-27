@@ -1,3 +1,7 @@
+Dado("Eu estou na tela inicial") do
+  visit('/users')
+end
+
 Dado('Eu navego para pagina de Login') do
   visit('/users/sign_in')
 end
